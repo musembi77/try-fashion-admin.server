@@ -41,6 +41,7 @@ const deleteItemFromCart = require('./Clientroutes/deleteItemFromCart.js');
 const clearcartafterorder = require('./Clientroutes/clearcartafterorder.js');
 //orders
 const createOrder = require('./Clientroutes/createOrder.js');
+const sendPos = require('./Clientroutes/sendPos.js')
 //const getUserOrders = require('./Clientroutes/getUserOrders.js')
 //products
 const recommendProducts = require('./Clientroutes/recommendProducts.js');
@@ -48,7 +49,7 @@ const addReview = require('./Clientroutes/addReview.js');
 
 const app = express();
 
-let origins = ['https://try-fashion-admin-web.vercel.app','https://try-fashion-client-web.vercel.app'];
+let origins = ['https://try-fashion-admin-web.vercel.app','http://localhost:3000','https://try-fashion-client-web.vercel.app'];
 app.use(cors({credentials:true, origin: origins}));
 app.use(express.json())
 
@@ -94,6 +95,7 @@ app.use("/api/deleteitem",deleteItemFromCart);
 app.use("/api/clearcart",clearcartafterorder);
 //order
 app.use("/api/createorder",createOrder);
+app.use("/api/sendpos",sendPos)
 //products
 // app.use("/api/getproducts",getUsersProducts);
 // app.use('/api/getproduct',getUsersProducts);
