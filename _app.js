@@ -49,7 +49,7 @@ const addReview = require('./Clientroutes/addReview.js');
 const app = express();
 app.use(express.json())
 
-app.use(cors({credentials:true, origin: ['http://localhost:3001','http://localhost:3000'] }));
+app.use(cors({credentials:true, origin: 'http://localhost:3000'}));
 
 
 app.get("/",(req,res)=>{
