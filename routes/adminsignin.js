@@ -15,8 +15,8 @@ router.post('/',async(req,res)=>{
 			return res.status(201).send('no auth details provided')
 		}
 	//check if user is  exists create user and is accepted by admin
-	// const admin = await Admin.findOne({email:auth.email})
-	// console.log(admin)
+	const admin = await Admin.findOne({email:auth.email})
+	console.log(admin)
 	// if(!admin){
 	// 	return res.status(201).send('no account found')
 	// }
