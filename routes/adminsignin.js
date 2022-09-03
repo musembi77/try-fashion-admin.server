@@ -53,7 +53,7 @@ router.post('/',async(req,res)=>{
 		return res.status(200).send(token)
 	}
 	return res.status(201)
-	create user
+	//
 	return user
 })
 
