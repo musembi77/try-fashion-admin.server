@@ -49,7 +49,7 @@ const addReview = require('./Clientroutes/addReview.js');
 
 const app = express();
 
-let origins = ['https://try-fashion-admin-web.vercel.app','http://localhost:3000','https://try-fashion-client-web.vercel.app'];
+let origins = ['https://tryfashionshopadmin.com','http://localhost:3000','https://tryfashionshop.com'];
 app.use(cors({credentials:true, origin: origins}));
 app.use(express.json())
 

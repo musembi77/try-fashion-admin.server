@@ -5,10 +5,10 @@ let router = express.Router();
 
 router.post('/',async(req,res)=>{
     //get token
-    const { token } = req.body;
-    console.log(token)
+    const { email } = req.body;
+    console.log(email)
     //find user
-    const user = await Client.findOne({access_token:token});
+    const user = await Client.findOne({email:email});
     console.log(user)
     //returnuser
     if(user){
